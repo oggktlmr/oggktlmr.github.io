@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Apartamento Turístico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        header select {
+            margin-top: 10px;
+            padding: 5px;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+    </style>
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("languageSelect").value;
+            var elements = document.querySelectorAll("[data-lang]");
+            elements.forEach(function(element) {
+                element.style.display = element.getAttribute("data-lang") === lang ? "block" : "none";
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">Información del Apartamento Turístico</h1>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
+    </header>
+    <nav>
+        <a href="#indice" data-lang="es">Índice</a>
+        <a href="#wifi" data-lang="es">Wifi</a>
+        <a href="#aparcamientos" data-lang="es">Aparcamientos</a>
+        <a href="#restaurantes" data-lang="es">Restaurantes</a>
+        <a href="#actividades" data-lang="es">Actividades y Atracciones</a>
+        <a href="#transporte" data-lang="es">Transporte</a>
+        <a href="#salud" data-lang="es">Salud y Seguridad</a>
+
+        <a href="#indice" data-lang="en" style="display:none;">Index</a>
+        <a href="#wifi" data-lang="en" style="display:none;">Wifi</a>
+        <a href="#aparcamientos" data-lang="en" style="display:none;">Parking</a>
+        <a href="#restaurantes" data-lang="en" style="display:none;">Restaurants</a>
+        <a href="#actividades" data-lang="en" style="display:none;">Activities & Attractions</a>
+        <a href="#transporte" data-lang="en" style="display:none;">Transportation</a>
+        <a href="#salud" data-lang="en" style="display:none;">Health & Safety</a>
+
+        <a href="#indice" data-lang="fr" style="display:none;">Index</a>
+        <a href="#wifi" data-lang="fr" style="display:none;">Wifi</a>
+        <a href="#aparcamientos" data-lang="fr" style="display:none;">Stationnement</a>
+        <a href="#restaurantes" data-lang="fr" style="display:none;">Restaurants</a>
+        <a href="#actividades" data-lang="fr" style="display:none;">Activités & Attractions</a>
+        <a href="#transporte" data-lang="fr" style="display:none;">Transport</a>
+        <a href="#salud" data-lang="fr" style="display:none;">Santé & Sécurité</a>
+    </nav>
+    
+    <div class="container">
+        <section id="indice">
+            <h2 data-lang="es">Índice</h2>
+            <h2 data-lang="en" style="display:none;">Index</h2>
+            <h2 data-lang="fr" style="display:none;">Index</h2>
+            <ul>
+                <li><a href="#wifi" data-lang="es">Wifi</a><a href="#wifi" data-lang="en" style="display:none;">Wifi</a><a href="#wifi" data-lang="fr" style="display:none;">Wifi</a></li>
+                <li><a href="#aparcamientos" data-lang="es">Aparcamientos</a><a href="#aparcamientos" data-lang="en" style="display:none;">Parking</a><a href="#aparcamientos" data-lang="fr" style="display:none;">Stationnement</a></li>
+                <li><a href="#restaurantes" data-lang="es">Restaurantes Recomendados</a><a href="#restaurantes" data-lang="en" style="display:none;">Recommended Restaurants</a><a href="#restaurantes" data-lang="fr" style="display:none;">Restaurants Recommandés</a></li>
+                <li><a href="#actividades" data-lang="es">Actividades y Atracciones</a><a href="#actividades" data-lang="en" style="display:none;">Activities & Attractions</a><a href="#actividades" data-lang="fr" style="display:none;">Activités & Attractions</a></li>
+                <li><a href="#transporte" data-lang="es">Transporte</a><a href="#transporte" data-lang="en" style="display:none;">Transportation</a><a href="#transporte" data-lang="fr" style="display:none;">Transport</a></li>
+                <li><a href="#salud" data-lang="es">Salud y Seguridad</a><a href="#salud" data-lang="en" style="display:none;">Health & Safety</a><a href="#salud" data-lang="fr" style="display:none;">Santé & Sécurité</a></li>
+            </ul>
+        </section>
+
+        <section id="wifi">
+            <h2 data-lang="es">Wifi</h2>
+            <p data-lang="es">El nombre de Wifi es: INVENCIBLE o INVENCIBLE-5G</p>
+            <p data-lang="es">La contraseña es: 88888888</p>
+
+            <h2 data-lang="en" style="display:none;">Wifi</h2>
+            <p data-lang="en" style="display:none;">The Wifi name is: INVENCIBLE or INVENCIBLE-5G</p>
+            <p data-lang="en" style="display:none;">The password is: 88888888</p>
+
+            <h2 data-lang="fr" style="display:none;">Wifi</h2>
+            <p data-lang="fr" style="display:none;">Le nom du Wifi est : INVENCIBLE ou INVENCIBLE-5G</p>
+            <p data-lang="fr" style="display:none;">Le mot de passe est : 88888888</p>
+        </section>
+
+        <section id="aparcamientos">
+            <h2 data-lang="es">Aparcamientos</h2>
+            <p data-lang="es">A continuación, les brindamos información importante sobre las dos opciones de aparcamiento disponibles:</p>
+            <ol>
+                <li data-lang="es">
+                    <strong>Aparcamiento delante del apartamento:</strong><br>
+                    Justo delante del apartamento hay espacio público suficiente para aparcar dos coches.<br>
+                    La entrada permite maniobrar tanto hacia adelante como hacia atrás, facilitando el estacionamiento.<br>
+                    No pueden haber 3 coches ya que el del medio quedaría bloqueado sin poder moverse.
+                </li>
+                <li data-lang="es">
+                    <strong>Parking subterráneo privado:</strong><br>
+                    A 8 minutos andando del apartamento, encontrarán un parking subterráneo privado.<br>
+                    El mando para acceder a este parking está en el apartamento.<br>
+                    La dirección del parking es: xxxxx<br>
+                    Y puede usar una de estas dos plazas: XX y XX.
+                </li>
+            </ol>
+
+            <h2 data-lang="en" style="display:none;">Parking</h2>
+            <p data-lang="en" style="display:none;">Below is important information about the two parking options available:</p>
+            <ol>
+                <li data-lang="en" style="display:none;">
+                    <strong>Parking in front of the apartment:</strong><br>
+                    There is enough public space right in front of the apartment to park two cars.<br>
+                    The entrance allows for both forward and backward maneuvering, making parking easier.<br>
+                    Three cars cannot fit as the middle one would be blocked.
+                </li>
+                <li data-lang="en" style="display:none;">
+                    <strong>Private underground parking:</strong><br>
+                    An 8-minute walk from the apartment, you will find a private underground parking.<br>
+                    The remote control to access this parking is in the apartment.<br>
+                    The address of the parking is: xxxxx<br>
+                    You can use one of these two spots: XX and XX.
+                </li>
+            </ol>
+
+            <h2 data-lang="fr" style="display:none;">Stationnement</h2>
+            <p data-lang="fr" style="display:none;">Voici des informations importantes sur les deux options de stationnement disponibles :</p>
+            <ol>
+                <li data-lang="fr" style="display:none;">
+                    <strong>Stationnement devant l'appartement :</strong><br>
+                    Il y a suffisamment d'espace public juste devant l'appartement pour garer deux voitures.<br>
+                    L'entrée permet de manœuvrer en marche avant comme en marche arrière, ce qui facilite le stationnement.<br>
+                    Trois voitures ne peuvent pas se garer car celle du milieu serait bloquée.
+                </li>
+                <li data-lang="fr" style="display:none;">
+                    <strong>Parking souterrain privé :</strong><br>
+                    À 8 minutes à pied de l'appartement, vous trouverez un parking souterrain privé.<br>
+                    La télécommande pour accéder à ce parking se trouve dans l'appartement.<br>
+                    L'adresse du parking est : xxxxx<br>
+                    Vous pouvez utiliser l'une de ces deux places : XX et XX.
+                </li>
+            </ol>
+        </section>
+
+        <section id="restaurantes">
+            <h2 data-lang="es">Restaurantes Recomendados</h2>
+            <ul>
+                <li data-lang="es">
+                    <strong>Restaurante XYZ</strong><br>
+                    Dirección: Calle Mayor, 1, 08001 Barcelona<br>
+                    Teléfono: +34 123 456 789<br>
+                    Descripción: Especializado en cocina mediterránea con un toque moderno.
+                </li>
+                <li data-lang="es">
+                    <strong>Restaurante ABC</strong><br>
+                    Dirección: Carrer del Port, 25, 17130 L'Escala, Girona<br>
+                    Teléfono: +34 972 77 12 62<br>
+                    Descripción: Ofrece una selección de platos típicos de la región, preparados con ingredientes frescos y de calidad. Ideal para una cena tranquila.
+                </li>
+            </ul>
+
+            <h2 data-lang="en" style="display:none;">Recommended Restaurants</h2>
+            <ul>
+                <li data-lang="en" style="display:none;">
+                    <strong>Restaurant XYZ</strong><br>
+                    Address: Calle Mayor, 1, 08001 Barcelona<br>
+                    Phone: +34 123 456 789<br>
+                    Description: Specializes in Mediterranean cuisine with a modern twist.
+                </li>
+                <li data-lang="en" style="display:none;">
+                    <strong>Restaurant ABC</strong><br>
+                    Address: Carrer del Port, 25, 17130 L'Escala, Girona<br>
+                    Phone: +34 972 77 12 62<br>
+                    Description: Offers a selection of typical regional dishes, prepared with fresh and quality ingredients. Ideal for a quiet dinner.
+                </li>
+            </ul>
+
+            <h2 data-lang="fr" style="display:none;">Restaurants Recommandés</h2>
+            <ul>
+                <li data-lang="fr" style="display:none;">
+                    <strong>Restaurant XYZ</strong><br>
+                    Adresse : Calle Mayor, 1, 08001 Barcelone<br>
+                    Téléphone : +34 123 456 789<br>
+                    Description : Spécialisé dans la cuisine méditerranéenne avec une touche moderne.
+                </li>
+                <li data-lang="fr" style="display:none;">
+                    <strong>Restaurant ABC</strong><br>
+                    Adresse : Carrer del Port, 25, 17130 L'Escala, Gérone<br>
+                    Téléphone : +34 972 77 12 62<br>
+                    Description : Offre une sélection de plats typiques de la région, préparés avec des ingrédients frais et de qualité. Idéal pour un dîner tranquille.
+                </li>
+            </ul>
+        </section>
+
+        <section id="actividades">
+            <h2 data-lang="es">Actividades y Atracciones</h2>
+            <!-- Añadir contenido en español -->
+
+            <h2 data-lang="en" style="display:none;">Activities & Attractions</h2>
+            <!-- Añadir contenido en inglés -->
+
+            <h2 data-lang="fr" style="display:none;">Activités & Attractions</h2>
+            <!-- Añadir contenido en francés -->
+        </section>
+
+        <section id="transporte">
+            <h2 data-lang="es">Transporte</h2>
+            <!-- Añadir contenido en español -->
+
+            <h2 data-lang="en" style="display:none;">Transportation</h2>
+            <!-- Añadir contenido en inglés -->
+
+            <h2 data-lang="fr" style="display:none;">Transport</h2>
+            <!-- Añadir contenido en francés -->
+        </section>
+
+        <section id="salud">
+            <h2 data-lang="es">Salud y Seguridad</h2>
+            <!-- Añadir contenido en español -->
+
+            <h2 data-lang="en" style="display:none;">Health & Safety</h2>
+            <!-- Añadir contenido en inglés -->
+
+            <h2 data-lang="fr" style="display:none;">Santé & Sécurité</h2>
+            <!-- Añadir contenido en francés -->
+        </section>
+    </div>
+</body>
+</html>
