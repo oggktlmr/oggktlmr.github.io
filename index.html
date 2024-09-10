@@ -7,39 +7,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
         }
-        header select {
-            margin-top: 10px;
-            padding: 5px;
-        }
-        nav {
-            background: #f4f4f4;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
+        h1 {
+            color: white;
         }
         .container {
+            background-color: #fff;
             padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h2 {
             color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .important {
+            font-weight: bold;
+            color: red;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        .half-size {
+            max-width: 50%; /* Reduce la imagen a la mitad del ancho del contenedor */
+        }
+        .lang-select {
+            margin-top: 10px;
         }
     </style>
     <script>
@@ -54,206 +67,151 @@
 </head>
 <body>
     <header>
-        <h1 style="color: white;">Información del Apartamento Turístico</h1>
-        <select id="languageSelect" onchange="changeLanguage()">
+        <h1>Información del Apartamento Turístico</h1>
+        <select id="languageSelect" class="lang-select" onchange="changeLanguage()">
             <option value="es">Español</option>
             <option value="en">English</option>
             <option value="fr">Français</option>
         </select>
     </header>
-    <nav>
-        <a href="#indice" data-lang="es">Índice</a>
-        <a href="#wifi" data-lang="es">Wifi</a>
-        <a href="#aparcamientos" data-lang="es">Aparcamientos</a>
-        <a href="#restaurantes" data-lang="es">Restaurantes</a>
-        <a href="#actividades" data-lang="es">Actividades y Atracciones</a>
-        <a href="#transporte" data-lang="es">Transporte</a>
-        <a href="#salud" data-lang="es">Salud y Seguridad</a>
-
-        <a href="#indice" data-lang="en" style="display:none;">Index</a>
-        <a href="#wifi" data-lang="en" style="display:none;">Wifi</a>
-        <a href="#aparcamientos" data-lang="en" style="display:none;">Parking</a>
-        <a href="#restaurantes" data-lang="en" style="display:none;">Restaurants</a>
-        <a href="#actividades" data-lang="en" style="display:none;">Activities & Attractions</a>
-        <a href="#transporte" data-lang="en" style="display:none;">Transportation</a>
-        <a href="#salud" data-lang="en" style="display:none;">Health & Safety</a>
-
-        <a href="#indice" data-lang="fr" style="display:none;">Index</a>
-        <a href="#wifi" data-lang="fr" style="display:none;">Wifi</a>
-        <a href="#aparcamientos" data-lang="fr" style="display:none;">Stationnement</a>
-        <a href="#restaurantes" data-lang="fr" style="display:none;">Restaurants</a>
-        <a href="#actividades" data-lang="fr" style="display:none;">Activités & Attractions</a>
-        <a href="#transporte" data-lang="fr" style="display:none;">Transport</a>
-        <a href="#salud" data-lang="fr" style="display:none;">Santé & Sécurité</a>
-    </nav>
     
     <div class="container">
-        <section id="indice">
-            <h2 data-lang="es">Índice</h2>
-            <h2 data-lang="en" style="display:none;">Index</h2>
-            <h2 data-lang="fr" style="display:none;">Index</h2>
+        <h2 data-lang="es">La Entrada al Apartamento</h2>
+        <h2 data-lang="en" style="display:none;">The Apartment Entrance</h2>
+        <h2 data-lang="fr" style="display:none;">L'Entrée de l'Appartement</h2>
+
+        <p data-lang="es">La entrada al apartamento es autónoma, puede hacerla usted mismo. La dirección exacta es:</p>
+        <p data-lang="en" style="display:none;">The entrance to the apartment is autonomous; you can do it yourself. The exact address is:</p>
+        <p data-lang="fr" style="display:none;">L'entrée à l'appartement est autonome, vous pouvez le faire vous-même. L'adresse exacte est :</p>
+
+        <p><strong>Sants Celi i Rustic, 3 1r 2a</strong></p>
+
+        <p data-lang="es">Puede dejar un momento el coche en la <span class="important">flecha roja</span>. Primero tiene que entrar en el apartamento para coger las llaves de la puerta para vehículos. La puerta para peatones está abierta.</p>
+        <p data-lang="en" style="display:none;">You can momentarily park the car at the <span class="important">red arrow</span>. First, you need to enter the apartment to get the keys to the vehicle door. The pedestrian door is open.</p>
+        <p data-lang="fr" style="display:none;">Vous pouvez momentanément garer la voiture à la <span class="important">flèche rouge</span>. Tout d'abord, vous devez entrer dans l'appartement pour récupérer les clés de la porte des véhicules. La porte piétonne est ouverte.</p>
+
+        <h2 data-lang="es">Instrucciones de Entrada</h2>
+        <h2 data-lang="en" style="display:none;">Entrance Instructions</h2>
+        <h2 data-lang="fr" style="display:none;">Instructions d'Entrée</h2>
+
+        <ol>
+            <li data-lang="es">Llegada al apartamento.</li>
+            <li data-lang="en" style="display:none;">Arrival at the apartment.</li>
+            <li data-lang="fr" style="display:none;">Arrivée à l'appartement.</li>
+            <!-- Imagen para el punto 1 reducida a la mitad -->
+            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f1.JPG" alt="Llegada al apartamento" class="half-size">
+
+            <li data-lang="es">Entre por la puerta peatonal. Está abierta.</li>
+            <li data-lang="en" style="display:none;">Enter through the pedestrian door. It is open.</li>
+            <li data-lang="fr" style="display:none;">Entrez par la porte piétonne. Elle est ouverte.</li>
+            <!-- Imagen para el punto 2 -->
+            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f2.JPG" alt="Puerta peatonal abierta">
+
+            <li data-lang="es">Una vez que esté delante de la puerta, envíeme un mensaje por WhatsApp o llámeme. Yo le abriré la puerta remotamente desde mi móvil.</li>
+            <li data-lang="en" style="display:none;">Once you are in front of the door, send me a message on WhatsApp or call me. I will open the door remotely from my mobile.</li>
+            <li data-lang="fr" style="display:none;">Une fois que vous êtes devant la porte, envoyez-moi un message sur WhatsApp ou appelez-moi. J'ouvrirai la porte à distance depuis mon mobile.</li>
+            <!-- Imagen para el punto 3 -->
+            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f3.JPG" alt="Delante de la puerta">
+
+            <li data-lang="es">Suba hasta la primera planta. La puerta del piso es 1r 2a.</li>
+            <li data-lang="en" style="display:none;">Go up to the first floor. The apartment door is 1r 2a.</li>
+            <li data-lang="fr" style="display:none;">Montez au premier étage. La porte de l'appartement est 1r 2a.</li>
+            <!-- Imagen para el punto 4 -->
+            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f4.JPG" alt="Puerta del piso 1r 2a">
+
+            <li data-lang="es">En el interior del apartamento, en la entrada, está el mando de la puerta para coches.</li>
+            <li data-lang="en" style="display:none;">Inside the apartment, at the entrance, is the remote control for the vehicle door.</li>
+            <li data-lang="fr" style="display:none;">À l'intérieur de l'appartement, à l'entrée, se trouve la télécommande pour la porte des véhicules.</li>
+            <!-- Imagen para el punto 5 -->
+            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f5.JPG" alt="Mando de la puerta para coches">
+
+            <li data-lang="es">Su plaza de aparcamiento es cualquiera de las dos que están marcadas con la <span class="important">flecha</span>. También tienen una placa:</li>
+            <li data-lang="en" style="display:none;">Your parking space is one of the two marked with the <span class="important">arrow</span>. They also have a plaque:</li>
+            <li data-lang="fr" style="display:none;">Votre place de parking est l'une des deux marquées par la <span class="important">flèche</span>. Elles ont aussi une plaque :</li>
+            <!-- Imagen para el punto 6 -->
+            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f6.JPG" alt="Plaza de aparcamiento">
             <ul>
-                <li><a href="#wifi" data-lang="es">Wifi</a><a href="#wifi" data-lang="en" style="display:none;">Wifi</a><a href="#wifi" data-lang="fr" style="display:none;">Wifi</a></li>
-                <li><a href="#aparcamientos" data-lang="es">Aparcamientos</a><a href="#aparcamientos" data-lang="en" style="display:none;">Parking</a><a href="#aparcamientos" data-lang="fr" style="display:none;">Stationnement</a></li>
-                <li><a href="#restaurantes" data-lang="es">Restaurantes Recomendados</a><a href="#restaurantes" data-lang="en" style="display:none;">Recommended Restaurants</a><a href="#restaurantes" data-lang="fr" style="display:none;">Restaurants Recommandés</a></li>
-                <li><a href="#actividades" data-lang="es">Actividades y Atracciones</a><a href="#actividades" data-lang="en" style="display:none;">Activities & Attractions</a><a href="#actividades" data-lang="fr" style="display:none;">Activités & Attractions</a></li>
-                <li><a href="#transporte" data-lang="es">Transporte</a><a href="#transporte" data-lang="en" style="display:none;">Transportation</a><a href="#transporte" data-lang="fr" style="display:none;">Transport</a></li>
-                <li><a href="#salud" data-lang="es">Salud y Seguridad</a><a href="#salud" data-lang="en" style="display:none;">Health & Safety</a><a href="#salud" data-lang="fr" style="display:none;">Santé & Sécurité</a></li>
+                <li data-lang="es">Portal num 1: cuarto 1ª cuarto 2ª</li>
+                <li data-lang="en" style="display:none;">Portal num 1: room 1st room 2nd</li>
+                <li data-lang="fr" style="display:none;">Portail numéro 1 : première chambre, deuxième chambre</li>
             </ul>
-        </section>
+        </ol>
 
-        <section id="wifi">
-            <h2 data-lang="es">Wifi</h2>
-            <p data-lang="es">El nombre de Wifi es: INVENCIBLE o INVENCIBLE-5G</p>
-            <p data-lang="es">La contraseña es: 88888888</p>
+        <h2 data-lang="es">Tasa Turística</h2>
+        <h2 data-lang="en" style="display:none;">Tourist Tax</h2>
+        <h2 data-lang="fr" style="display:none;">Taxe Touristique</h2>
 
-            <h2 data-lang="en" style="display:none;">Wifi</h2>
-            <p data-lang="en" style="display:none;">The Wifi name is: INVENCIBLE or INVENCIBLE-5G</p>
-            <p data-lang="en" style="display:none;">The password is: 88888888</p>
+        <p data-lang="es">La tasa turística está pendiente de pago. Esta tasa de la Generalitat es de 1€ por persona y noche hasta un máximo de 7 noches. Puede dejar el dinero en el interior del apartamento.</p>
+        <p data-lang="en" style="display:none;">The tourist tax is pending payment. This Generalitat tax is 1€ per person per night for up to 7 nights. You can leave the money inside the apartment.</p>
+        <p data-lang="fr" style="display:none;">La taxe touristique est en attente de paiement. Cette taxe de la Generalitat est de 1€ par personne et par nuit jusqu'à 7 nuits. Vous pouvez laisser l'argent à l'intérieur de l'appartement.</p>
+        <!-- Imagen para la Tasa Turística -->
+        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f7.JPG" alt="Tasa Turística">
 
-            <h2 data-lang="fr" style="display:none;">Wifi</h2>
-            <p data-lang="fr" style="display:none;">Le nom du Wifi est : INVENCIBLE ou INVENCIBLE-5G</p>
-            <p data-lang="fr" style="display:none;">Le mot de passe est : 88888888</p>
-        </section>
+        <h2 data-lang="es">Identificación de los Huéspedes</h2>
+        <h2 data-lang="en" style="display:none;">Guest Identification</h2>
+        <h2 data-lang="fr" style="display:none;">Identification des Hôtes</h2>
 
-        <section id="aparcamientos">
-            <h2 data-lang="es">Aparcamientos</h2>
-            <p data-lang="es">A continuación, les brindamos información importante sobre las dos opciones de aparcamiento disponibles:</p>
-            <ol>
-                <li data-lang="es">
-                    <strong>Aparcamiento delante del apartamento:</strong><br>
-                    Justo delante del apartamento hay espacio público suficiente para aparcar dos coches.<br>
-                    La entrada permite maniobrar tanto hacia adelante como hacia atrás, facilitando el estacionamiento.<br>
-                    No pueden haber 3 coches ya que el del medio quedaría bloqueado sin poder moverse.
-                </li>
-                <li data-lang="es">
-                    <strong>Parking subterráneo privado:</strong><br>
-                    A 8 minutos andando del apartamento, encontrarán un parking subterráneo privado.<br>
-                    El mando para acceder a este parking está en el apartamento.<br>
-                    La dirección del parking es: xxxxx<br>
-                    Y puede usar una de estas dos plazas: XX y XX.
-                </li>
-            </ol>
+        <p data-lang="es">También necesitaré que me envíen una fotografía del DNI o pasaporte de todos los adultos. Esto es necesario para registrarlos en el apartamento.</p>
+        <p data-lang="en" style="display:none;">I will also need you to send me a photo of the ID card or passport of all adults. This is necessary to register them in the apartment.</p>
+        <p data-lang="fr" style="display:none;">Je vous demanderai également de m'envoyer une photo de la carte d'identité ou du passeport de tous les adultes. Ceci est nécessaire pour les enregistrer dans l'appartement.</p>
 
-            <h2 data-lang="en" style="display:none;">Parking</h2>
-            <p data-lang="en" style="display:none;">Below is important information about the two parking options available:</p>
-            <ol>
-                <li data-lang="en" style="display:none;">
-                    <strong>Parking in front of the apartment:</strong><br>
-                    There is enough public space right in front of the apartment to park two cars.<br>
-                    The entrance allows for both forward and backward maneuvering, making parking easier.<br>
-                    Three cars cannot fit as the middle one would be blocked.
-                </li>
-                <li data-lang="en" style="display:none;">
-                    <strong>Private underground parking:</strong><br>
-                    An 8-minute walk from the apartment, you will find a private underground parking.<br>
-                    The remote control to access this parking is in the apartment.<br>
-                    The address of the parking is: xxxxx<br>
-                    You can use one of these two spots: XX and XX.
-                </li>
-            </ol>
+        <h2 data-lang="es">Contacto</h2>
+        <h2 data-lang="en" style="display:none;">Contact</h2>
+        <h2 data-lang="fr" style="display:none;">Contact</h2>
 
-            <h2 data-lang="fr" style="display:none;">Stationnement</h2>
-            <p data-lang="fr" style="display:none;">Voici des informations importantes sur les deux options de stationnement disponibles :</p>
-            <ol>
-                <li data-lang="fr" style="display:none;">
-                    <strong>Stationnement devant l'appartement :</strong><br>
-                    Il y a suffisamment d'espace public juste devant l'appartement pour garer deux voitures.<br>
-                    L'entrée permet de manœuvrer en marche avant comme en marche arrière, ce qui facilite le stationnement.<br>
-                    Trois voitures ne peuvent pas se garer car celle du milieu serait bloquée.
-                </li>
-                <li data-lang="fr" style="display:none;">
-                    <strong>Parking souterrain privé :</strong><br>
-                    À 8 minutes à pied de l'appartement, vous trouverez un parking souterrain privé.<br>
-                    La télécommande pour accéder à ce parking se trouve dans l'appartement.<br>
-                    L'adresse du parking est : xxxxx<br>
-                    Vous pouvez utiliser l'une de ces deux places : XX et XX.
-                </li>
-            </ol>
-        </section>
+        <p data-lang="es">Espero que disfrute de su estancia en el apartamento. Si encuentra cualquier tipo de incidencia, no dude en contactarnos. La mejor manera de contactarnos es a través de la aplicación WhatsApp.</p>
+        <p data-lang="en" style="display:none;">I hope you enjoy your stay in the apartment. If you encounter any issues, do not hesitate to contact us. The best way to contact us is through the WhatsApp application.</p>
+        <p data-lang="fr" style="display:none;">J'espère que vous apprécierez votre séjour dans l'appartement. Si vous rencontrez un problème, n'hésitez pas à nous contacter. Le meilleur moyen de nous contacter est via l'application WhatsApp.</p>
 
-        <section id="restaurantes">
-            <h2 data-lang="es">Restaurantes Recomendados</h2>
-            <ul>
-                <li data-lang="es">
-                    <strong>Restaurante XYZ</strong><br>
-                    Dirección: Calle Mayor, 1, 08001 Barcelona<br>
-                    Teléfono: +34 123 456 789<br>
-                    Descripción: Especializado en cocina mediterránea con un toque moderno.
-                </li>
-                <li data-lang="es">
-                    <strong>Restaurante ABC</strong><br>
-                    Dirección: Carrer del Port, 25, 17130 L'Escala, Girona<br>
-                    Teléfono: +34 972 77 12 62<br>
-                    Descripción: Ofrece una selección de platos típicos de la región, preparados con ingredientes frescos y de calidad. Ideal para una cena tranquila.
-                </li>
-            </ul>
+        <p>Teléfonos de contacto:</p>
+        <ul>
+            <li>+34 649 40 70 87</li>
+            <li>+34 676 76 26 23</li>
+        </ul>
+        <!-- Imagen añadida al final del apartado Contacto -->
+        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f8.JPG" alt="Contacto WhatsApp">
 
-            <h2 data-lang="en" style="display:none;">Recommended Restaurants</h2>
-            <ul>
-                <li data-lang="en" style="display:none;">
-                    <strong>Restaurant XYZ</strong><br>
-                    Address: Calle Mayor, 1, 08001 Barcelona<br>
-                    Phone: +34 123 456 789<br>
-                    Description: Specializes in Mediterranean cuisine with a modern twist.
-                </li>
-                <li data-lang="en" style="display:none;">
-                    <strong>Restaurant ABC</strong><br>
-                    Address: Carrer del Port, 25, 17130 L'Escala, Girona<br>
-                    Phone: +34 972 77 12 62<br>
-                    Description: Offers a selection of typical regional dishes, prepared with fresh and quality ingredients. Ideal for a quiet dinner.
-                </li>
-            </ul>
+        <h2 data-lang="es">Recomendaciones en Figueres</h2>
+        <h2 data-lang="en" style="display:none;">Recommendations in Figueres</h2>
+        <h2 data-lang="fr" style="display:none;">Recommandations à Figueres</h2>
 
-            <h2 data-lang="fr" style="display:none;">Restaurants Recommandés</h2>
-            <ul>
-                <li data-lang="fr" style="display:none;">
-                    <strong>Restaurant XYZ</strong><br>
-                    Adresse : Calle Mayor, 1, 08001 Barcelone<br>
-                    Téléphone : +34 123 456 789<br>
-                    Description : Spécialisé dans la cuisine méditerranéenne avec une touche moderne.
-                </li>
-                <li data-lang="fr" style="display:none;">
-                    <strong>Restaurant ABC</strong><br>
-                    Adresse : Carrer del Port, 25, 17130 L'Escala, Gérone<br>
-                    Téléphone : +34 972 77 12 62<br>
-                    Description : Offre une sélection de plats typiques de la région, préparés avec des ingrédients frais et de qualité. Idéal pour un dîner tranquille.
-                </li>
-            </ul>
-        </section>
+        <h3 data-lang="es">Atracciones</h3>
+        <h3 data-lang="en" style="display:none;">Attractions</h3>
+        <h3 data-lang="fr" style="display:none;">Attractions</h3>
+        <!-- Imagen añadida al apartado Atracciones -->
+        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f9.JPG" alt="Atracciones en Figueres">
 
-        <section id="actividades">
-            <h2 data-lang="es">Actividades y Atracciones</h2>
-            <!-- Añadir contenido en español -->
+        <ul>
+            <li data-lang="es">Museu Dalí</li>
+            <li data-lang="en" style="display:none;">Dalí Museum</li>
+            <li data-lang="fr" style="display:none;">Musée Dalí</li>
 
-            <h2 data-lang="en" style="display:none;">Activities & Attractions</h2>
-            <!-- Añadir contenido en inglés -->
+            <li data-lang="es">Museu del Joguet</li>
+            <li data-lang="en" style="display:none;">Toy Museum</li>
+            <li data-lang="fr" style="display:none;">Musée du Jouet</li>
 
-            <h2 data-lang="fr" style="display:none;">Activités & Attractions</h2>
-            <!-- Añadir contenido en francés -->
-        </section>
+            <li data-lang="es">Castell de Sant Ferran</li>
+            <li data-lang="en" style="display:none;">Sant Ferran Castle</li>
+            <li data-lang="fr" style="display:none;">Château de Sant Ferran</li>
+        </ul>
 
-        <section id="transporte">
-            <h2 data-lang="es">Transporte</h2>
-            <!-- Añadir contenido en español -->
+        <h3 data-lang="es">Restaurantes</h3>
+        <h3 data-lang="en" style="display:none;">Restaurants</h3>
+        <h3 data-lang="fr" style="display:none;">Restaurants</h3>
 
-            <h2 data-lang="en" style="display:none;">Transportation</h2>
-            <!-- Añadir contenido en inglés -->
+        <ul>
+            <li data-lang="es"><strong>Meson Asador:</strong> Restaurante especializado en carnes.</li>
+            <li data-lang="en" style="display:none;"><strong>Meson Asador:</strong> Restaurant specialized in meats.</li>
+            <li data-lang="fr" style="display:none;"><strong>Meson Asador:</strong> Restaurant spécialisé dans les viandes.</li>
 
-            <h2 data-lang="fr" style="display:none;">Transport</h2>
-            <!-- Añadir contenido en francés -->
-        </section>
+            <li data-lang="es"><strong>Integral:</strong> Restaurante vegetariano.</li>
+            <li data-lang="en" style="display:none;"><strong>Integral:</strong> Vegetarian restaurant.</li>
+            <li data-lang="fr" style="display:none;"><strong>Integral:</strong> Restaurant végétarien.</li>
 
-        <section id="salud">
-            <h2 data-lang="es">Salud y Seguridad</h2>
-            <!-- Añadir contenido en español -->
-
-            <h2 data-lang="en" style="display:none;">Health & Safety</h2>
-            <!-- Añadir contenido en inglés -->
-
-            <h2 data-lang="fr" style="display:none;">Santé & Sécurité</h2>
-            <!-- Añadir contenido en francés -->
-        </section>
+            <li data-lang="es"><strong>Restaurant Bar Tony's Figueres:</strong> Bar-restaurante especializado en tablas de embutidos.</li>
+            <li data-lang="en" style="display:none;"><strong>Restaurant Bar Tony's Figueres:</strong> Bar-restaurant specialized in cold cuts.</li>
+            <li data-lang="fr" style="display:none;"><strong>Restaurant Bar Tony's Figueres:</strong> Bar-restaurant spécialisé dans les plateaux de charcuterie.</li>
+        </ul>
     </div>
 </body>
 </html>
