@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech-West - Servicios de Telecomunicaciones</title>
     <style>
-    /* Reset básico */
+ /* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +15,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+html, body {
+    width: 100%; /* Asegura que el cuerpo tome todo el ancho disponible */
 }
 
 /* Estilos de la Cabecera */
@@ -31,6 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* Asegura que el contenedor tome todo el ancho */
 }
 
 .logo {
@@ -79,14 +85,16 @@ nav ul li a:hover {
     align-items: center;
     padding: 100px 0;
     background-color: #ffe6a7;
+    width: 100%; /* Evita el desbordamiento */
 }
 
 .hero-text {
     max-width: 50%;
+    width: 100%;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem; /* Tamaño reducido del texto */
+    font-size: 2.5rem;
     color: #432818;
 }
 
@@ -121,6 +129,7 @@ nav ul li a:hover {
     padding: 50px 20px;
     background-color: #ffffff;
     text-align: center;
+    width: 100%;
 }
 
 .services-header {
@@ -143,6 +152,7 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    width: 100%;
 }
 
 .service-item {
@@ -183,7 +193,8 @@ nav ul li a:hover {
     padding: 50px 20px;
     text-align: center;
     background-color: #f9f9f9;
-    border: 2px solid #FF6600; /* Borde como en la imagen */
+    border: 2px solid #FF6600;
+    width: 100%;
 }
 
 .contact-header {
