@@ -3,233 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información del Apartamento Turístico</title>
+    <title>Tech-West - Servicios de Telecomunicaciones</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+        /* Reset básico */
+        * {
             margin: 0;
-            padding: 20px;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            background-image: url('https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f9.JPG');
-            background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el header */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat;
-            opacity: 0.6; /* Establece la transparencia del fondo */
-        }
-        h1 {
-            color: white;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            font-size: 2.5em;
-        }
-        ul {
-            list-style-type: none;
             padding: 0;
+            box-sizing: border-box;
         }
-        ul li {
-            margin-bottom: 10px;
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
         }
-        .important {
+        
+        /* Estilos de la Cabecera */
+        header {
+            background-color: #432818; /* Marrón oscuro para la cabecera */
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo span {
+            font-size: 1.5rem;
             font-weight: bold;
-            color: red;
+            color: #ffe6a7;
+            letter-spacing: 1px;
         }
-        img {
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #ffe6a7;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #bb9457;
+        }
+        
+        /* Estilos de la Sección Principal (Hero) */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 0;
+            background-color: #ffe6a7;
+        }
+        
+        .hero-text {
+            max-width: 50%;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.5rem; /* Tamaño reducido del texto */
+            color: #432818;
+        }
+        
+        .hero-text p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: #99582a;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background-color: #6f1d1b;
+            color: #ffe6a7;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #bb9457;
+        }
+        
+        .hero-image img {
             max-width: 100%;
             height: auto;
-            display: block;
-            margin: 20px 0;
+            border-radius: 10px;
         }
-        .half-size {
-            max-width: 50%; /* Reduce la imagen a la mitad del ancho del contenedor */
+        
+        /* Estilos de la Sección de Servicios */
+        .services {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
         }
-        .lang-select {
-            margin-top: 10px;
-            font-size: 1.8em; /* Aumenta el tamaño de la fuente */
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        @media screen and (min-width: 1024px) {
-        .jamon-image {
-            max-width: 30%;
+        
+        .services-header h2 {
+            font-size: 2.5rem;
+            color: #432818;
+        }
+        
+        .services-header .info {
+            font-size: 1rem;
+            color: #99582a;
+        }
+        
+        /* Lista de Servicios */
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+        
+        .service-item i {
+            font-size: 3rem;
+            color: #6f1d1b;
+            margin-bottom: 15px;
+        }
+        
+        .service-item h3 {
+            font-size: 1.5rem;
+            color: #432818;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .service-item p {
+            font-size: 1.1rem;
+            color: #99582a;
+        }
+        
+        .service-item:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+        
+            .services-header {
+                text-align: center;
             }
         }
+
     </style>
-    <script>
-        function changeLanguage() {
-            var lang = document.getElementById("languageSelect").value;
-            var elements = document.querySelectorAll("[data-lang]");
-            elements.forEach(function(element) {
-                element.style.display = element.getAttribute("data-lang") === lang ? "block" : "none";
-            });
-        }
-    </script>
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Cabecera -->
     <header>
-      
-        <h1 data-lang="es">Información del Apartamento Turístico Figueres</h2>
-        <h1 data-lang="en" style="display:none;">Tourist apartment information Figueres</h2>
-        <h1 data-lang="fr" style="display:none;">Informations sur l’appartement touristique Figueres</h2>
-        <select id="languageSelect" class="lang-select" onchange="changeLanguage()">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-        </select>
+        <div class="container">
+            <div class="logo">
+                <img src="https://i.ibb.co/ccVMjsK/Captura.jpg" alt="Logo Tech-West">
+                <span>Tech-West</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <div class="container">
-        <h2 data-lang="es">La dirección exacta es:</h2>
-        <h2 data-lang="en" style="display:none;">The exact address is:</h2>
-        <h2 data-lang="fr" style="display:none;">L’adresse exacte est:</h2>
 
-        <p><strong><a href="https://maps.app.goo.gl/iSiJ425SsBkdpfqz7" target="_blank">Calle Sants Celi i Rustic, 3 1r 2a</a></strong></p>
+    <!-- Sección Principal -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Soluciones en Telecomunicaciones</h1>
+                <p>En Tech-West ofrecemos servicios expertos en la instalación de antenas terrestres y parabólicas, sistemas de cámaras de seguridad y videoporteros para garantizar la conectividad y seguridad en su hogar o negocio.</p>
+                <a href="#services" class="btn">Explorar Servicios</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/fMz59R2/hero-antenes.webp" alt="Servicios de Telecomunicaciones">
+            </div>
+        </div>
+    </section>
 
-        <h2 data-lang="es">Instrucciones de Entrada</h2>
-        <h2 data-lang="en" style="display:none;">Entrance Instructions</h2>
-        <h2 data-lang="fr" style="display:none;">Instructions d'Entrée</h2>
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <div class="services-header">
+            <h2>Nuestros Servicios</h2>
+            <p class="info">Más información en 972 510 053.</p>
+        </div>
 
-        <ol>
-            <li data-lang="es">Llegada al apartamento:</li>
-            <li data-lang="en" style="display:none;">Arrival at the apartment:</li>
-            <li data-lang="fr" style="display:none;">Arrivée à l'appartement:</li>
+        <div class="container">
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fas fa-video"></i>
+                    <h3>INSTALACIÓN DE CÁMARAS DE SEGURIDAD</h3>
+                    <p>Instalamos sistemas de cámaras de seguridad de alta calidad, garantizando la protección de su hogar o negocio con la última tecnología de vigilancia y monitoreo remoto.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-wifi"></i>
+                    <h3>INSTALACIÓN DE ACCESS POINTS</h3>
+                    <p>Ofrecemos soluciones de red WiFi con puntos de acceso avanzados para garantizar una conectividad rápida, fiable y estable en todas las áreas de su propiedad, ya sea residencial o comercial.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-door-open"></i>
+                    <h3>INSTALACIÓN DE VIDEOPORTEROS</h3>
+                    <p>Instalamos videoporteros inteligentes que permiten la comunicación visual y el control de acceso desde cualquier lugar, asegurando la seguridad y comodidad en su hogar o empresa.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3>INSTALACIÓN DE ANTENAS TERRESTRES Y PARABÓLICAS</h3>
+                    <p>Realizamos la instalación de antenas terrestres y parabólicas para garantizar una recepción óptima de señales de televisión digital y satélite en cualquier entorno.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-desktop"></i>
+                    <h3>REPARACIÓN DE EQUIPOS INFORMÁTICOS</h3>
+                    <p>Ofrecemos servicios de reparación para ordenadores y otros dispositivos informáticos, garantizando un diagnóstico rápido y soluciones efectivas para maximizar el rendimiento de sus equipos.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>MANTENIMIENTO DE REDES</h3>
+                    <p>Nos encargamos del mantenimiento y la optimización de redes, asegurando que su infraestructura de telecomunicaciones funcione con la máxima eficiencia y seguridad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p data-lang="es">Puede dejar un momento el coche en la <span class="important">flecha roja</span>. Primero tiene que entrar en el apartamento para coger las llaves de la puerta para vehículos. La puerta para peatones está abierta.</p>
-            <p data-lang="en" style="display:none;">You can momentarily park the car at the <span class="important">red arrow</span>. First, you need to enter the apartment to get the keys to the vehicle door. The pedestrian door is open.</p>
-            <p data-lang="fr" style="display:none;">Vous pouvez momentanément garer la voiture à la <span class="important">flèche rouge</span>. Tout d'abord, vous devez entrer dans l'appartement pour récupérer les clés de la porte des véhicules. La porte piétonne est ouverte.</p>
-
-
-            
-            <!-- Imagen para el punto 1 -->
-            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f1.JPG" alt="Llegada al apartamento" >
-
-            <li data-lang="es">Entre por la puerta peatonal. Está abierta.</li>
-            <li data-lang="en" style="display:none;">Enter through the pedestrian door. It is open.</li>
-            <li data-lang="fr" style="display:none;">Entrez par la porte piétonne. Elle est ouverte.</li>
-            <!-- Imagen para el punto 2 -->
-            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f2.JPG" alt="Puerta peatonal abierta">
-
-            <li data-lang="es">Una vez que esté delante de la puerta, envíeme un mensaje por WhatsApp o llámeme. Yo le abriré la puerta remotamente desde mi móvil.</li>
-            <li data-lang="en" style="display:none;">Once you are in front of the door, send me a message on WhatsApp or call me. I will open the door remotely from my mobile.</li>
-            <li data-lang="fr" style="display:none;">Une fois que vous êtes devant la porte, envoyez-moi un message sur WhatsApp ou appelez-moi. J'ouvrirai la porte à distance depuis mon mobile.</li>
-            <!-- Imagen para el punto 3 -->
-            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f3.JPG" alt="Delante de la puerta">
-
-            <li data-lang="es">Suba hasta la primera planta. La puerta del piso es 1r 2a.</li>
-            <li data-lang="en" style="display:none;">Go up to the first floor. The apartment door is 1r 2a.</li>
-            <li data-lang="fr" style="display:none;">Montez au premier étage. La porte de l'appartement est 1r 2a.</li>
-            <!-- Imagen para el punto 4 -->
-            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f4.JPG" alt="Puerta del piso 1r 2a">
-
-            <li data-lang="es">En el interior del apartamento, en la entrada, está el mando de la puerta para coches.</li>
-            <li data-lang="en" style="display:none;">Inside the apartment, at the entrance, is the remote control for the vehicle door.</li>
-            <li data-lang="fr" style="display:none;">À l'intérieur de l'appartement, à l'entrée, se trouve la télécommande pour la porte des véhicules.</li>
-            <!-- Imagen para el punto 5 -->
-            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f5.JPG" alt="Mando de la puerta para coches">
-
-            <li data-lang="es">Su plaza de aparcamiento es cualquiera de las dos que están marcadas con la <span class="important">flecha</span>. También tienen una placa:</li>
-            <li data-lang="en" style="display:none;">Your parking space is one of the two marked with the <span class="important">arrow</span>. They also have a plaque:</li>
-            <li data-lang="fr" style="display:none;">Votre place de parking est l'une des deux marquées par la <span class="important">flèche</span>. Elles ont aussi une plaque :</li>
-
-            <ul>
-                <li data-lang="es">Portal num 1: cuarto 1ª cuarto 2ª</li>
-                <li data-lang="en" style="display:none;">Portal num 1: room 1st room 2nd</li>
-                <li data-lang="fr" style="display:none;">Portail numéro 1 : première chambre, deuxième chambre</li>
-            </ul>
-            
-            <!-- Imagen para el punto 6 -->
-            <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f6.JPG" alt="Plaza de aparcamiento">
-            
-        </ol>
-
-        <h2 data-lang="es">Tasa Turística</h2>
-        <h2 data-lang="en" style="display:none;">Tourist Tax</h2>
-        <h2 data-lang="fr" style="display:none;">Taxe Touristique</h2>
-
-        <p data-lang="es">La tasa turística está pendiente de pago. Esta tasa de la Generalitat es de 1€ por persona y noche hasta un máximo de 7 noches. Puede dejar el dinero en el interior del apartamento.</p>
-        <p data-lang="en" style="display:none;">The tourist tax is pending payment. This Generalitat tax is 1€ per person per night for up to 7 nights. You can leave the money inside the apartment.</p>
-        <p data-lang="fr" style="display:none;">La taxe touristique est en attente de paiement. Cette taxe de la Generalitat est de 1€ par personne et par nuit jusqu'à 7 nuits. Vous pouvez laisser l'argent à l'intérieur de l'appartement.</p>
-        <!-- Imagen para la Tasa Turística -->
-        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f7.JPG" alt="Tasa Turística" class="half-size">
-
-        <h2 data-lang="es">Identificación de los Huéspedes</h2>
-        <h2 data-lang="en" style="display:none;">Guest Identification</h2>
-        <h2 data-lang="fr" style="display:none;">Identification des Hôtes</h2>
-
-        <p data-lang="es">También necesitaré que me envíen una fotografía del DNI o pasaporte de todos los adultos. Esto es necesario para registrarlos en el apartamento.</p>
-        <p data-lang="en" style="display:none;">I will also need you to send me a photo of the ID card or passport of all adults. This is necessary to register them in the apartment.</p>
-        <p data-lang="fr" style="display:none;">Je vous demanderai également de m'envoyer une photo de la carte d'identité ou du passeport de tous les adultes. Ceci est nécessaire pour les enregistrer dans l'appartement.</p>
-
-        <h2 data-lang="es">Contacto</h2>
-        <h2 data-lang="en" style="display:none;">Contact</h2>
-        <h2 data-lang="fr" style="display:none;">Contact</h2>
-
-        <p data-lang="es">Espero que disfrute de su estancia en el apartamento. Si encuentra cualquier tipo de incidencia, no dude en contactarnos. La mejor manera de contactarnos es a través de la aplicación WhatsApp.</p>
-        <p data-lang="en" style="display:none;">I hope you enjoy your stay in the apartment. If you encounter any issues, do not hesitate to contact us. The best way to contact us is through the WhatsApp application.</p>
-        <p data-lang="fr" style="display:none;">J'espère que vous apprécierez votre séjour dans l'appartement. Si vous rencontrez un problème, n'hésitez pas à nous contacter. Le meilleur moyen de nous contacter est via l'application WhatsApp.</p>
-
-        <p>Teléfonos de contacto:</p>
-        <ul>
-            <li>+34 649 40 70 87</li>
-            <li>+34 676 76 26 23</li>
-        </ul>
-        <!-- Imagen añadida al final del apartado Contacto -->
-        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f8.JPG" alt="Contacto WhatsApp" class="half-size">
-
-        <h2 data-lang="es">Recomendaciones en Figueres</h2>
-        <h2 data-lang="en" style="display:none;">Recommendations in Figueres</h2>
-        <h2 data-lang="fr" style="display:none;">Recommandations à Figueres</h2>
-
-        <h3 data-lang="es">Atracciones</h3>
-        <h3 data-lang="en" style="display:none;">Attractions</h3>
-        <h3 data-lang="fr" style="display:none;">Attractions</h3>
-        <!-- Imagen añadida al apartado Atracciones -->
-        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/f9.JPG" alt="Atracciones en Figueres" class="half-size">
-
-        <ul>
-            <li data-lang="es">Museu Dalí</li>
-            <li data-lang="en" style="display:none;">Dalí Museum</li>
-            <li data-lang="fr" style="display:none;">Musée Dalí</li>
-
-            <li data-lang="es">Museu del Joguet</li>
-            <li data-lang="en" style="display:none;">Toy Museum</li>
-            <li data-lang="fr" style="display:none;">Musée du Jouet</li>
-
-            <li data-lang="es">Castell de Sant Ferran</li>
-            <li data-lang="en" style="display:none;">Sant Ferran Castle</li>
-            <li data-lang="fr" style="display:none;">Château de Sant Ferran</li>
-        </ul>
-
-        <h3 data-lang="es">Restaurantes</h3>
-        <h3 data-lang="en" style="display:none;">Restaurants</h3>
-        <h3 data-lang="fr" style="display:none;">Restaurants</h3>
-
-        <ul>
-            <li data-lang="es"><strong>Meson Asador:</strong> Restaurante especializado en carnes.</li>
-            <li data-lang="en" style="display:none;"><strong>Meson Asador:</strong> Restaurant specialized in meats.</li>
-            <li data-lang="fr" style="display:none;"><strong>Meson Asador:</strong> Restaurant spécialisé dans les viandes.</li>
-
-            <li data-lang="es"><strong>Integral:</strong> Restaurante vegetariano.</li>
-            <li data-lang="en" style="display:none;"><strong>Integral:</strong> Vegetarian restaurant.</li>
-            <li data-lang="fr" style="display:none;"><strong>Integral:</strong> Restaurant végétarien.</li>
-
-            <li data-lang="es"><strong>Restaurant Bar Tony's Figueres:</strong> Bar-restaurante especializado en tablas de embutidos.</li>
-            <li data-lang="en" style="display:none;"><strong>Restaurant Bar Tony's Figueres:</strong> Bar-restaurant specialized in cold cuts.</li>
-            <li data-lang="fr" style="display:none;"><strong>Restaurant Bar Tony's Figueres:</strong> Bar-restaurant spécialisé dans les plateaux de charcuterie.</li>
-        </ul>
-        <img src="https://raw.githubusercontent.com/oggktlmr/oggktlmr.github.io/main/jamon.jpg" alt="Jamon" class="jamon-image">
-    </div>
 </body>
 </html>
