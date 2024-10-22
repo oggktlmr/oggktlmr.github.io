@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech-West - Servicios de Telecomunicaciones</title>
     <style>
-        /* Reset básico */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -213,60 +213,6 @@ nav ul li a:hover {
 }
 
 /* Footer Styles */
-footer {
-    background-color: #432818; /* Color marrón oscuro */
-    color: #fff;
-    padding: 40px 0;
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-about,
-.footer-links {
-    flex: 1;
-    margin-bottom: 20px;
-}
-
-.footer-about h3,
-.footer-links h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #ffe6a7;
-}
-
-.footer-about p {
-    color: #ccc;
-    line-height: 1.5;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    text-decoration: none;
-    color: #ffe6a7;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #bb9457; /* Color más claro al hacer hover */
-}
-
-/* Footer Bottom */
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
@@ -308,7 +254,36 @@ footer {
     background-color: #bb9457;
 }
 
-    </style>
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+        </style>
     <!-- Font Awesome para iconos -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -400,22 +375,6 @@ footer {
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-container">
-            <div class="footer-about">
-                <h3>Sobre Tech-West</h3>
-                <p>Tech-West es una empresa especializada en soluciones de telecomunicaciones, brindando servicios de instalación y mantenimiento de redes, cámaras de seguridad, antenas y más.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="#about">Quiénes somos</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#">Aviso legal</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Tech-West. Todos los derechos reservados.</p>
         </div>
