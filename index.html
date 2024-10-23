@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech-West - Servicios de Telecomunicaciones</title>
     <style>
-
         /* Reset básico */
 * {
     margin: 0;
@@ -42,19 +41,24 @@ header {
 
 .logo {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.logo img {
-    height: 40px;
-    margin-right: 10px;
+.logo-title {
+    font-family: 'Cinzel', serif; /* Tipografía estilo western */
+    font-size: 3.125rem; /* Aumentado en 2 puntos */
+    font-weight: 400;
+    color: #90EE90; /* Verde claro para Tech-West */
+    letter-spacing: 2px;
 }
 
-.logo span {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #90EE90; /* Verde claro para Tech-West */
-    letter-spacing: 1px;
+.eslogan {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ffe6a7; /* Color del eslogan */
+    margin-top: 5px;
 }
 
 nav ul {
@@ -97,6 +101,9 @@ nav ul li a:hover {
 .hero-text h1 {
     font-size: 2.5rem;
     color: #432818;
+    overflow-wrap: break-word; /* Asegura que el título se divida si es muy largo */
+    max-width: 100%; /* Evita que el texto se salga de los márgenes */
+    margin: 0; /* Elimina márgenes innecesarios */
 }
 
 .hero-text p {
@@ -123,6 +130,12 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        display: none; /* Ocultar imagen del hero en móviles */
+    }
 }
 
 /* Estilos de la Sección de Servicios */
@@ -275,8 +288,8 @@ nav ul li a:hover {
     <header>
         <div class="container">
             <div class="logo">
-                <img src="https://i.ibb.co/FWSdJW4/Captura.png" alt="Logo Tech-West">
-                <span>Tech-West</span>
+                <span class="logo-title">Tech-West</span>
+                <span class="eslogan">Telecomunicaciones Figueres</span>
             </div>
             <nav>
                 <ul>
@@ -292,7 +305,7 @@ nav ul li a:hover {
     <section class="hero" id="about">
         <div class="container">
             <div class="hero-text">
-                <h1>Soluciones</h1>
+                <h1>Soluciones en Telecomunicaciones</h1>
                 <p>En Tech-West ofrecemos servicios expertos en la instalación de antenas terrestres y parabólicas, sistemas de cámaras de seguridad y videoporteros para garantizar la conectividad y seguridad en su hogar o negocio.</p>
                 <a href="#services" class="btn">Explorar Servicios</a>
             </div>
