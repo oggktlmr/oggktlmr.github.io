@@ -7,86 +7,34 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
-
         .form-container {
-            background-color: #ffffff;
+            max-width: 800px;
+            margin: 50px auto;
             padding: 20px;
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        .form-container h1 {
+        h1 {
             text-align: center;
             color: #333;
-            margin-bottom: 20px;
         }
-
-        label {
-            font-weight: bold;
-            color: #555;
-        }
-
-        input, textarea, button {
+        iframe {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: white;
+            height: 600px;
             border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .form-footer {
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
-
-        .form-footer a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .form-footer a:hover {
-            text-decoration: underline;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <div class="form-container">
-        <h1>Contacto</h1>
-        <form action="https://script.google.com/macros/s/AKfycby0_JNX9T6NTuLgNjVZp2TSoFDTbLX3-rm9m5iXR2Srifj_EbN7yZMyHAQ42gGfnWyW/exec" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
+        <h1>Formulario de Contacto</h1>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSfs8jLVYKejCb12SYbDxVhv41H2SVumX6RKXrB1axomVqEQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
     </div>
 </body>
 </html>
